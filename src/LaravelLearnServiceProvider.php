@@ -2,6 +2,7 @@
 
 namespace Exzachlyvv\LaravelLearn;
 
+use Exzachlyvv\LaravelLearn\Commands\LearnCommand;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelLearnServiceProvider extends ServiceProvider
@@ -40,7 +41,9 @@ class LaravelLearnServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-            // $this->commands([]);
+            $this->commands([
+                LearnCommand::class,
+            ]);
         }
     }
 

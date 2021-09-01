@@ -14,7 +14,7 @@ class LearnCommandTest extends BaseTest
     public function learnCommandWillDisplayAFactToTheConsoleFromTheApi()
     {
         Http::fake([
-            'learnlaravelphp.com/api/learning' => Http::response([
+            'learnlaravelphp.com/learn' => Http::response([
                 'data' => [
                     'text' => [
                         'Did you know?',

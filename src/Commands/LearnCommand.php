@@ -39,7 +39,7 @@ class LearnCommand extends Command
      */
     public function handle()
     {
-        $fact = Http::get("https://learnlaravelphp.com/api/learning")->throw()->json('data.text');
+        $fact = Http::get("https://learnlaravelphp.com/learn")->throw()->json('data.text');
 
         foreach ($fact as $rowToOutput) {
             $this->output->writeln($rowToOutput);
